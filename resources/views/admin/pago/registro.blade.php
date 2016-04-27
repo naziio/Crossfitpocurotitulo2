@@ -1,0 +1,1 @@
+{{ Form::select('nombres', $wodfijo, $selected) }}
