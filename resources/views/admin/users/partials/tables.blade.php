@@ -8,10 +8,10 @@
     @foreach( $users as $user)
 
     <tr>
-        <th>{{$user->id}}</th>
-        <th>{{$user->name}}</th>
-        <th>{{$user->email}}</th>
-        <th><a href="{{ route('admin.users.edit', $user) }}">Editar</a> <a href="">Eliminar</a></th>
+        <td>{{$user->id}}</td>
+        <td>{{$user->name}}</td>
+        <td>{{$user->email}}</td>
+        <td><a href="{{ route('admin.users.edit', $user) }}">Editar</a> <a href="">Eliminar</a></td>
 
     </tr>
     @endforeach

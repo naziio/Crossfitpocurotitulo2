@@ -1,4 +1,4 @@
-
+<div class="container">
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         @lang('auth.errors_title'):<br><br>
@@ -9,3 +9,4 @@
         </ul>
     </div>
 @endif
+</div>

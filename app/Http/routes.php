@@ -17,7 +17,7 @@ Route::group(['middleware' => 'web'], function () {
     return view('welcome');
     });
 
-
+Route::get('/tabla' , 'HomeController@tabla');
 
 });
 Route::get('/home', [
@@ -57,6 +57,13 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('evaluacion/habilitar/edit', 'EvaluacionController@habilitaredit');
     Route::put('evaluacion/habilitar/edit', 'EvaluacionController@habilitarupdate');
+
+    Route::get('evaluacion/completa','EvaluacionController@completa');
+
+    Route::get('evaluacion/completa/{id}',[
+        'as' => 'evaluacion.completa',
+        'uses' => 'EvaluacionController@completa'
+    ]);
 
 
     Route::resource('evaluacion', 'EvaluacionController');

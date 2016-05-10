@@ -8,11 +8,11 @@
     @foreach( $wod as $wods)
 
     <tr>
-        <th>{{$wods->id}}</th>
-        <th>{{$wods->nombre}}</th>
-        <th>{{$wods->descripcion}}</th>
-        <th>{{$wods->fecha}}</th>
-        <th><a href="{{ route('admin.woddiario.edit', $wods) }}">Editar</a> <a href="">Eliminar</a></th>
+        <td>{{$wods->id}}</td>
+        <td>{{$wods->nombre}}</td>
+        <td>{{$wods->descripcion}}</td>
+        <td>{{$wods->fecha}}</td>
+        <td><a href="{{ route('admin.woddiario.edit', $wods) }}">Editar</a> <a href="">Eliminar</a></td>
 
     </tr>
     @endforeach

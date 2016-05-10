@@ -1,18 +1,20 @@
 <h2>Noticias</h2>
-<table class="table table-bordered">
+<table class="table table-condensed">
+    <thead>
     <tr>
         <th>#</th>
         <th>Nombre</th>
         <th>Descripcion</th>
         <th>Fecha</th>
     </tr>
+    </thead>
     @foreach( $noticia as $noticias)
 
     <tr>
-        <th>{{$noticias->id}}</th>
-        <th>{{$noticias->name}}</th>
-        <th>{{$noticias->descripcion}}</th>
-        <th>{{$noticias->fecha}}</th>
+        <td>{{$noticias->id}}</td>
+        <td>{{$noticias->name}}</td>
+        <td>{{$noticias->descripcion}}</td>
+        <td>{{$noticias->fecha}}</td>
 
     </tr>
     @endforeach
@@ -21,20 +23,21 @@
 
 @if (Auth::check())
 <h2>WOD Diario</h2>
-<table class="table table-bordered">
+<table class="table table-condensed">
+    <thead>
     <tr>
         <th>#</th>
         <th>Nombre</th>
         <th>Descripcion</th>
         <th>Fecha</th>
     </tr>
-
+    </thead>
     @foreach( $comparar as $comparars)
     <tr>
-        <th>{{$comparars->id}}</th>
-        <th>{{$comparars->nombre}}</th>
-        <th>{{$comparars->descripcion}}</th>
-        <th>{{$comparars->fecha}}</th>
+        <td>{{$comparars->id}}</td>
+        <td>{{$comparars->nombre}}</td>
+        <td>{{$comparars->descripcion}}</td>
+        <td>{{$comparars->fecha}}</td>
 
     </tr>
     @endforeach

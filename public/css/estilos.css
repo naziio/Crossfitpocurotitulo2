@@ -1,0 +1,22 @@
+.fondo{
+    background-image: url('../fotos/fondo3.jpg');
+}
+
+.panel-body{
+    background-image: url('../fotos/fondo1.jpg');
+    font-size: 13px;
+}
+
+.panel-custom-horrible-red {
+    border-color: #fdfdfd;
+}
+.panel-custom-horrible-red > .panel-heading {
+    background-image: url('../fotos/fondomenu.jpg');
+    color: #040302;
+    border-color: #fbfbfb;
+}
+
+.body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}

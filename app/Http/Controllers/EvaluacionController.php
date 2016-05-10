@@ -7,7 +7,9 @@ use App\HabilitarEvaluacion;
 use Illuminate\Http\Request;
 use App\User;
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use DB;
 
 class EvaluacionController extends Controller
 {
@@ -69,5 +71,26 @@ class EvaluacionController extends Controller
         session::flash('message','Evaluacion editada');
         //,array($bios->id)
         return redirect()->route('evaluacion.index');
+    }
+
+    public function show(Request $request)
+    {
+
+        $user = $request->user();
+        $evaluacion= DB::table('evaluacion')
+        ->where('user_id_fk', $user->id)
+            ->orderBy('created_at', 'asc')
+            ->get();
+        return view ('evaluacion.show',compact('evaluacion'));
+    }
+
+    public function completa($id)
+    {
+
+        $evaluacion= DB::table('evaluacion')
+            ->where('id', $id)
+            ->get();
+
+        return view('evaluacion.completa',['evaluacion' =>$evaluacion]);
     }
 }

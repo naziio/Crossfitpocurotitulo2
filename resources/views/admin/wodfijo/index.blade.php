@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
+            <div class="panel panel-custom-horrible-red">
                 <div class="panel-heading">W.O.D </div>
                 <div class="panel-body">
                     <a class="btn btn-info" href="{{route('wodfijo.create')}}" role="button">Nuevo WOD</a>

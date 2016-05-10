@@ -1,19 +1,23 @@
 <table class="table table-bordered">
+    <thead></thead>
     <tr>
         <th>#</th>
         <th>Nombre</th>
         <th>Descripcion</th>
         <th>Fecha</th>
     </tr>
+    </thead>
+    <tbody>
     @foreach( $noticia as $noticias)
 
     <tr>
-        <th>{{$noticias->id}}</th>
-        <th>{{$noticias->name}}</th>
-        <th>{{$noticias->descripcion}}</th>
-        <th>{{$noticias->fecha}}</th>
-        <th><a href="{{ route('admin.noticia.edit', $noticias) }}">Editar</a> <a href="">Eliminar</a></th>
+        <td>{{$noticias->id}}</td>
+        <td>{{$noticias->name}}</td>
+        <td>{{$noticias->descripcion}}</td>
+        <td>{{$noticias->fecha}}</td>
+        <td><a href="{{ route('admin.noticia.edit', $noticias) }}">Editar</a> <a href="">Eliminar</a></td>
 
     </tr>
     @endforeach
+    </tbody>
 </table>

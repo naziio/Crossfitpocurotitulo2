@@ -10,16 +10,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
+            <div class="panel panel-custom-horrible-red">
                 <div class="panel-heading">Actualizar Biografia </div>
                 <div class="panel-body">
-                    @include('admin.partials.errors');
+                    <!--                    @include('admin.partials.errors')-->
                     {!! Form::model($bios, ['route'=>['bio.update',$bios], 'method'=>'PUT','files' =>'true'])!!}
-                    @include('admin.users.bio.partials.fields');
+                    @include('admin.users.bio.partials.fields')
                     <button type="submit" class="btn btn-default">Actualizar</button>
                     {!!Form::close() !!}
+                    @include('admin.users.bio.partials.delete');
                 </div>
-                @include('admin.users.bio.partials.delete');
+
             </div>
         </div>
     </div>

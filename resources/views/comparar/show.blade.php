@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
-
 @section('content')
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-       <div class="col-md-8 col-md-offset-2">
-           @include('partials/success')
-          <div class="panel panel-default">
+        <div class="col-md-10 col-md-offset-1">
+            @include('partials.success')
+            <div class="panel panel-custom-horrible-red">
                 <div class="panel-heading">Comparar Alumnos</div>
                 <div class="panel-body">
                     <h1>Modulo 1</h1>

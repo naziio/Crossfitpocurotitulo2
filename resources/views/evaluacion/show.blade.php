@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
+            @include('partials/success')
             <div class="panel panel-custom-horrible-red">
-                <div class="panel-heading">Biografia de  {{ $user->name }}</div>
-
+                <div class="panel-heading">Mis evaluaciones</div>
                 <div class="panel-body">
-                    <a class="btn btn-info" href="{{ route('bio.create') }}" role="button">Nuevo Usuario</a>
-                    <br/>
-                    @include('admin.users.bio.partials.tables');
+                    <h1>Listado</h1>
+
+                    @include('evaluacion.partials.ev')
                 </div>
             </div>
         </div>

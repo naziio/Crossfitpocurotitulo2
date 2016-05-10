@@ -1,5 +1,4 @@
-
-<div class="form-group">
+<div><div class="form-group">
     {!! Form::label('titulo', 'Titulo') !!}
     {!! Form::text('name', null, ['class'=>'form-control'])!!}
 </div>
@@ -11,4 +10,4 @@
     {!! Form::label('fecha', 'Fecha') !!}
     {!! Form::date('fecha',null, ['class'=>'form-control']) !!}
 </div>
-
+</div>
